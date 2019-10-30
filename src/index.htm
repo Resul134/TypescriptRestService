@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>My First REST</title>
+  <link rel="stylesheet" type="text/css" href="bundle.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="col-sm" style="margin-left: -200px;">
+        <h1 class="badge badge-info" style="font-size: 30px;">Rest service</h1>
+        <h2 style="color: brown;">Show all records</h2>
+        <button id="getAllButton" class="btn btn-primary">Get all</button>
+        <button id="resetButton" class="btn btn-danger">reset</button>  
+        <div id="getAll" class="jumbotron"></div>
+
+
+        <h2 style="margin-top: 50px; color: brown;">Get one auction</h2>
+        <input id="getoneInput" placeholder="Type an ID">
+        <button id="getoneButton" class="btn btn-primary">Get one</button>
+        <div id="getOne" style="margin-left: -30px;"></div>
+
+        <h2 style="margin-top: 30px; color: brown;">Add a coin to the auction</h2>
+        <input id="addID" placeholder="Type an id">
+        <br>
+        <input id="addGenstand" placeholder="Description of the coin" style="margin-top: 10px;">
+        <br>
+        <input id="addBud" placeholder="Bid amount" style="margin-top: 10px;">
+        <br>
+        <input id="addNavn" placeholder="Your name" style="margin-top: 10px;">
+        <button id="addButton"class="btn btn-primary">Add an auction</button>
+        <div id="postOutput"></div>
+
+
+        <h2 style="margin-top: 30px; color: brown;">Remove a coin</h2>
+        <input id="deleteID" placeholder="Type an ID">
+        <button id="deleteButton" class="btn btn-primary">Remove</button>
+        <div id="deletedCoinOutput"></div>
+
+
+        <h2 style="margin-top: 30px; color: brown;">Update a bid</h2>
+        <input id="IDtoUpdate" placeholder="ID of the auction">
+        <br>
+        <input id="updateBud" placeholder="Update the bid" style="margin-top: 10px;">
+        <br>
+        <input id="updateNavn" placeholder="Update the name" style="margin-top: 10px;">
+        <button id="updateButton">Update</button>
+        <div id="updateOutput"></div>
+
+
+        <h2 style="margin-top: 30px; color: brown;">Søge på en mønt (Price range)</h2>
+        <input id="MinBud" placeholder="Minimum bud">
+        <input id="MaxBud" placeholder="Maximum bud">
+        <button id="getSpecificCoin" class="btn btn-primary">Søg</button>
+
+        <div id="filterOutput"></div>
+
+        <h2 style="margin-top: 30px; color: brown;">Søg på navn</h2>
+        <input id="nameSearch" placeholder="Skriv et navn">
+        <button id="søgNavnButton" class="btn btn-primary">Søg</button>
+        <div id="filterName"></div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+  
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="bundle.js"></script>
+</body>
+</html>
